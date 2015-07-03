@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\PointCloudView.cs" />
     <Compile Include="Assets\Scripts\ProjectionWindow.cs" />
     <Compile Include="Assets\Scripts\ProjectorCalibration.cs" />
+    <Compile Include="Assets\Scripts\TemplateMatching.cs" />
     <Compile Include="Assets\Scripts\gui.cs" />
     <Compile Include="Assets\Scripts\multiWindow.cs" />
     <Compile Include="Assets\UnityChan\Scripts\AutoBlink.cs" />
