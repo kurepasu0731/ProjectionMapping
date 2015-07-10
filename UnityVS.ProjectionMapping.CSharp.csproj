@@ -81,10 +81,12 @@
     <Compile Include="Assets\KinectView\Scripts\InfraredSourceManager.cs" />
     <Compile Include="Assets\KinectView\Scripts\InfraredSourceView.cs" />
     <Compile Include="Assets\KinectView\Scripts\MultiSourceManager.cs" />
+    <Compile Include="Assets\Scripts\MatchingObjects.cs" />
     <Compile Include="Assets\Scripts\PointCloudView.cs" />
     <Compile Include="Assets\Scripts\ProjectionWindow.cs" />
     <Compile Include="Assets\Scripts\ProjectorCalibration.cs" />
     <Compile Include="Assets\Scripts\TemplateMatching.cs" />
+    <Compile Include="Assets\Scripts\TemplateMatchingManager.cs" />
     <Compile Include="Assets\Scripts\gui.cs" />
     <Compile Include="Assets\Scripts\multiWindow.cs" />
     <Compile Include="Assets\UnityChan\Scripts\AutoBlink.cs" />

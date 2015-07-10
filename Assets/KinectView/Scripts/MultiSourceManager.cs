@@ -12,6 +12,22 @@ public class MultiSourceManager : MonoBehaviour {
     private ushort[] _DepthData;
     private byte[] _ColorData;
 
+    public CameraSpacePoint[] cameraSpacePoints;
+    public CoordinateMapper mapper;
+
+    int depthWidth;
+    int depthHeight;
+
+    public int GetdepthWidth()
+    {
+        return depthWidth;
+    }
+
+    public int GetdepthHeight()
+    {
+        return depthHeight;
+    }
+
     public Texture2D GetColorTexture()
     {
         return _ColorTexture;
@@ -38,7 +54,13 @@ public class MultiSourceManager : MonoBehaviour {
             _ColorData = new byte[colorFrameDesc.BytesPerPixel * colorFrameDesc.LengthInPixels];
             
             var depthFrameDesc = _Sensor.DepthFrameSource.FrameDescription;
+            depthWidth = depthFrameDesc.Width;
+            depthHeight = depthFrameDesc.Height;
             _DepthData = new ushort[depthFrameDesc.LengthInPixels];
+
+            // buffer for points mapped to camera space coordinate.
+            cameraSpacePoints = new CameraSpacePoint[depthWidth * depthHeight];
+            mapper = KinectSensor.GetDefault().CoordinateMapper;
             
             if (!_Sensor.IsOpen)
             {
